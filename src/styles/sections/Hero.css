@@ -46,11 +46,10 @@
 
 .hero-content {
   color: #fff;
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0 2rem;
+  text-align: left;
+  padding: 0 1rem;
 }
 
 .hero-title {
@@ -99,7 +98,7 @@
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .hero-btn {
@@ -158,8 +157,8 @@
 }
 
 .code-window {
-  width: 550px;
-  height: 480px;
+  width: 34rem;
+  height: 35rem;
   background: rgba(0, 0, 0, 0.8);
   border: 2px solid #ff003c;
   border-radius: 12px;
@@ -270,12 +269,19 @@
 @media (max-width: 768px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
+    gap: 2rem;
+    padding: 1rem;
   }
   
   .hero-content {
-    padding: 0 1rem;
+    text-align: center;
+    max-width: 100%;
+    padding: 0;
+    order: 1;
+  }
+  
+  .hero-visual {
+    order: 2;
   }
   
   .hero-title {
@@ -288,36 +294,63 @@
   
   .hero-description {
     font-size: 1.1rem;
-  }
-  
-  .hero-buttons {
-    justify-content: center;
+    margin: 2rem 0;
   }
   
   .hero-stats {
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 2rem auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .stat-item {
+    text-align: center;
+    width: 100%;
   }
   
   .stat-value {
     font-size: 1.5rem;
   }
   
-  .code-window {
-    width: 350px;
-    height: 250px;
-    margin: 0 auto;
+  .hero-buttons {
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  
+  .hero-social {
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  /* Cambiar visibilidad */
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+  
+  .mobile-card {
+    width: 100%;
+    max-width: 30rem;
   }
 }
 
 @media (max-width: 480px) {
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    text-align: center;
+    gap: 1.5rem;
+    padding: 0.5rem;
   }
   
   .hero-content {
-    padding: 0 0.5rem;
+    text-align: center;
+    padding: 0;
   }
   
   .hero-title {
@@ -330,6 +363,7 @@
   
   .hero-description {
     font-size: 1rem;
+    margin: 1.5rem 0;
   }
   
   .hero-btn {
@@ -338,7 +372,18 @@
   }
   
   .hero-stats {
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .stat-item {
+    text-align: center;
+    width: 100%;
   }
   
   .stat-value {
@@ -346,32 +391,126 @@
   }
   
   .hero-social {
+    justify-content: center;
     gap: 1.5rem;
   }
   
-  .code-window {
-    width: 400px;
-    height: 300px;
-    padding: 2rem;
-    margin: 0 auto;
+  .mobile-card {
+    padding: 1.5rem;
   }
   
-  .code-content {
+  .mobile-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .mobile-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .mobile-info p {
+    font-size: 0.9rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .mobile-quote {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+  
+  .hero-scroll-indicator {
+    bottom: 0.5rem;
+    width: 20px;
+    height: 35px;
+  }
+  
+  .hero-scroll-indicator::before {
+    width: 2px;
+    height: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
     font-size: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .hero-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .hero-stats {
+    gap: 0.8rem;
+    margin: 1rem auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .stat-value {
+    font-size: 1.1rem;
+  }
+  
+  .hero-social {
+    gap: 1rem;
+  }
+  
+  .mobile-card {
+    padding: 1rem;
+  }
+  
+  .mobile-avatar {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.1rem;
+  }
+  
+  .mobile-info h3 {
+    font-size: 1.1rem;
+  }
+  
+  .mobile-info p {
+    font-size: 0.8rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  .mobile-quote {
+    font-size: 0.8rem;
+    padding: 0.6rem;
   }
 }
 
 .hero-stats {
   display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin: 3rem 0;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  margin: 1rem auto;
+  max-width: 100%;
+  width: 100%;
 }
 
 .stat-item {
   text-align: center;
   color: #fff;
+  width: 100%;
 }
 
 .stat-value {
@@ -393,7 +532,7 @@
 
 .hero-social {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -470,4 +609,99 @@
   font-family: 'Share Tech Mono', monospace;
   font-size: 0.9rem;
   text-shadow: 0 0 5px rgba(255, 0, 60, 0.6);
+}
+
+/* Clases para mostrar/ocultar según dispositivo */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+/* Tarjeta móvil */
+.mobile-card {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff003c;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 0 30px rgba(255, 0, 60, 0.4);
+  animation: windowGlow 4s ease-in-out infinite;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.mobile-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 0, 60, 0.3);
+}
+
+.mobile-avatar {
+  width: 4rem;
+  height: 4rem;
+  background: linear-gradient(135deg, #ff003c, #ff6b9d);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.8);
+  box-shadow: 0 0 20px rgba(255, 0, 60, 0.6);
+}
+
+.mobile-info h3 {
+  color: #ff003c;
+  font-size: 1.3rem;
+  margin: 0 0 0.3rem 0;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.6);
+}
+
+.mobile-info p {
+  color: #ccc;
+  font-size: 1rem;
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.mobile-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: rgba(255, 0, 60, 0.2);
+  color: #ff003c;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: 'Share Tech Mono', monospace;
+  border: 1px solid rgba(255, 0, 60, 0.4);
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.5);
+}
+
+.mobile-quote {
+  color: #fff;
+  font-style: italic;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 0, 60, 0.1);
+  border-radius: 8px;
+  border-left: 3px solid #ff003c;
+  font-family: 'Share Tech Mono', monospace;
 } 
