@@ -1,0 +1,472 @@
+/* Hero.css - Estilo monocromático rojo y negro, futurista */
+.hero {
+  min-height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 0, 60, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 0, 60, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 0, 60, 0.08) 0%, transparent 50%);
+  animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.hero-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  color: #fff;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #ff003c;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.8);
+  position: relative;
+  animation: titleGlow 3s ease-in-out infinite;
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 0 0 20px rgba(255, 0, 60, 0.8);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(255, 0, 60, 1);
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.1em;
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #aaa;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.hero-highlight {
+  color: #ff003c;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.5);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 1rem 2rem;
+  border: 2px solid #ff003c;
+  background: rgba(255, 0, 60, 0.1);
+  color: #ff003c;
+  text-decoration: none;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 60, 0.2), transparent);
+  transition: left 0.3s ease;
+}
+
+.hero-btn:hover::before {
+  left: 100%;
+}
+
+.hero-btn:hover {
+  background: rgba(255, 0, 60, 0.2);
+  box-shadow: 0 0 20px rgba(255, 0, 60, 0.4);
+  transform: translateY(-3px);
+}
+
+.hero-btn.primary {
+  background: rgba(255, 0, 60, 0.2);
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+}
+
+.hero-btn.primary:hover {
+  background: rgba(255, 0, 60, 0.3);
+  box-shadow: 0 0 25px rgba(255, 0, 60, 0.6);
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-window {
+  width: 550px;
+  height: 380px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff003c;
+  border-radius: 12px;
+  padding: 2.5rem;
+  position: relative;
+  box-shadow: 0 0 30px rgba(255, 0, 60, 0.4);
+  animation: windowGlow 4s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+@keyframes windowGlow {
+  0%, 100% {
+    box-shadow: 0 0 30px rgba(255, 0, 60, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(255, 0, 60, 0.8);
+  }
+}
+
+.window-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.window-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff003c;
+  box-shadow: 0 0 8px rgba(255, 0, 60, 0.8);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+.window-dot:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.window-dot:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.code-content {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.code-line {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.code-line::before {
+  content: '>';
+  color: #ff003c;
+  margin-right: 0.5rem;
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.8);
+}
+
+.code-keyword {
+  color: #ff003c;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.6);
+}
+
+.code-string {
+  color: #ff003c;
+  text-shadow: 0 0 3px rgba(255, 0, 60, 0.5);
+}
+
+.code-comment {
+  color: #666;
+  font-style: italic;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: #ff003c;
+  margin-left: 2px;
+  animation: blink 1s infinite;
+  box-shadow: 0 0 5px rgba(255, 0, 60, 0.8);
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-stats {
+    gap: 2rem;
+  }
+  
+  .stat-value {
+    font-size: 1.5rem;
+  }
+  
+  .code-window {
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding: 0 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .hero-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .hero-stats {
+    gap: 1.5rem;
+  }
+  
+  .stat-value {
+    font-size: 1.3rem;
+  }
+  
+  .hero-social {
+    gap: 1.5rem;
+  }
+  
+  .code-window {
+    width: 400px;
+    height: 300px;
+    padding: 2rem;
+    margin: 0 auto;
+  }
+  
+  .code-content {
+    font-size: 1rem;
+  }
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  color: #fff;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff003c;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.6);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 0.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero-social {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.hero-social a {
+  color: #ff003c;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.6);
+}
+
+.hero-social a:hover {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 0, 60, 1);
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border: 2px solid #ff003c;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scrollBounce 2s infinite;
+}
+
+.hero-scroll-indicator::before {
+  content: '';
+  width: 4px;
+  height: 8px;
+  background: #ff003c;
+  border-radius: 2px;
+  animation: scrollMove 2s infinite;
+  box-shadow: 0 0 5px rgba(255, 0, 60, 0.8);
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+@keyframes scrollMove {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.code-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 0, 60, 0.3);
+}
+
+.code-title {
+  color: #ff003c;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.6);
+} 

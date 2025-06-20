@@ -1,0 +1,293 @@
+/* Contact.css - Estilo monocromático rojo y negro, futurista */
+.contact {
+  padding: 6rem 2rem;
+  background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.contact-info {
+  color: #fff;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #ff003c;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 20px rgba(255, 0, 60, 0.8);
+  position: relative;
+}
+
+.contact-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff003c, transparent);
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+}
+
+.contact-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  color: #ccc;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.contact-highlight {
+  color: #ff003c;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.5);
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: rgba(255, 0, 60, 0.05);
+  border: 2px solid rgba(255, 0, 60, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-method::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 60, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.contact-method:hover::before {
+  left: 100%;
+}
+
+.contact-method:hover {
+  border-color: #ff003c;
+  box-shadow: 0 0 20px rgba(255, 0, 60, 0.3);
+  transform: translateX(10px);
+}
+
+.contact-icon {
+  font-size: 2rem;
+  color: #ff003c;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.8);
+}
+
+.contact-details h3 {
+  font-size: 1.2rem;
+  color: #ff003c;
+  margin-bottom: 0.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.6);
+}
+
+.contact-details p {
+  color: #ccc;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.contact-form {
+  background: rgba(255, 0, 60, 0.05);
+  border: 2px solid rgba(255, 0, 60, 0.3);
+  border-radius: 12px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 0, 60, 0.02) 50%, transparent 70%);
+  animation: formShimmer 4s infinite;
+}
+
+@keyframes formShimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.form-group {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.form-label {
+  display: block;
+  font-size: 1rem;
+  color: #ff003c;
+  margin-bottom: 0.5rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 5px rgba(255, 0, 60, 0.5);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 0, 60, 0.3);
+  border-radius: 8px;
+  color: #fff;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #ff003c;
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: rgba(255, 0, 60, 0.1);
+  border: 2px solid rgba(255, 0, 60, 0.4);
+  color: #ff003c;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 60, 0.2), transparent);
+  transition: left 0.3s ease;
+}
+
+.submit-btn:hover::before {
+  left: 100%;
+}
+
+.submit-btn:hover {
+  background: rgba(255, 0, 60, 0.2);
+  border-color: #ff003c;
+  box-shadow: 0 0 20px rgba(255, 0, 60, 0.4);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 4rem 1rem;
+  }
+  
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+  }
+  
+  .contact-form {
+    padding: 2rem;
+  }
+  
+  .contact-method {
+    padding: 1rem;
+  }
+  
+  .contact-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-description {
+    font-size: 1rem;
+  }
+  
+  .contact-form {
+    padding: 1.5rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+} 

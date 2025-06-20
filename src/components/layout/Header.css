@@ -1,0 +1,259 @@
+/* Header.css mejorado - diseño futurista monocromático rojo y negro */
+.header {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(255, 0, 60, 0.3);
+  border-bottom: 2px solid #ff003c;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.98);
+  box-shadow: 0 4px 25px rgba(255, 0, 60, 0.4);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 2rem;
+}
+
+.logo {
+  color: #ff003c;
+  font-size: 2rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 10px rgba(255, 0, 60, 0.8);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo:hover {
+  text-shadow: 0 0 20px rgba(255, 0, 60, 1);
+  transform: scale(1.05);
+}
+
+.logo h2 {
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Efecto glitch para el logo */
+.logo::before,
+.logo::after {
+  content: 'DEV';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #ff003c;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.logo::before {
+  text-shadow: 2px 0 rgba(255, 0, 60, 0.8);
+  animation: glitch-anim-1 3s infinite linear alternate-reverse;
+}
+
+.logo::after {
+  text-shadow: -2px 0 rgba(255, 0, 60, 0.8);
+  animation: glitch-anim-2 3.5s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip-path: inset(0 0 80% 0); }
+  20% { clip-path: inset(0 0 60% 0); }
+  40% { clip-path: inset(0 0 40% 0); }
+  60% { clip-path: inset(0 0 20% 0); }
+  80% { clip-path: inset(0 0 60% 0); }
+  100% { clip-path: inset(0 0 80% 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip-path: inset(80% 0 0 0); }
+  20% { clip-path: inset(60% 0 0 0); }
+  40% { clip-path: inset(40% 0 0 0); }
+  60% { clip-path: inset(20% 0 0 0); }
+  80% { clip-path: inset(60% 0 0 0); }
+  100% { clip-path: inset(80% 0 0 0); }
+}
+
+/* Navegación principal */
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-list li {
+  position: relative;
+}
+
+.nav-list button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.9rem;
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.nav-list button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 0, 60, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.nav-list button:hover::before {
+  left: 100%;
+}
+
+.nav-list button:hover {
+  color: #ff003c;
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.8);
+  border-color: #ff003c;
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+  transform: translateY(-2px);
+}
+
+.nav-list button.active {
+  color: #ff003c;
+  text-shadow: 0 0 8px rgba(255, 0, 60, 0.8);
+  border-color: #ff003c;
+  box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+  background: rgba(255, 0, 60, 0.1);
+}
+
+.nav-list button:active {
+  transform: translateY(0);
+}
+
+/* Botón del menú móvil */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ff003c;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid #ff003c;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(255, 0, 60, 0.1);
+  box-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0.5rem 1rem;
+  }
+  
+  .logo {
+    font-size: 1.8rem;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    backdrop-filter: blur(10px);
+    border-top: 2px solid #ff003c;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .nav.mobile-open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    padding: 1.5rem 0;
+  }
+  
+  .nav-list li {
+    width: 100%;
+  }
+  
+  .nav-list button {
+    width: 100%;
+    padding: 0.8rem 2rem;
+    text-align: left;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-top: 1px solid rgba(255, 0, 60, 0.2);
+    border-bottom: 1px solid rgba(255, 0, 60, 0.2);
+  }
+  
+  .nav-list button:hover {
+    background: rgba(255, 0, 60, 0.1);
+    border-color: #ff003c;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-container {
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+  }
+  
+  .nav-list button {
+    font-size: 0.85rem;
+    padding: 0.7rem 1.5rem;
+  }
+} 
