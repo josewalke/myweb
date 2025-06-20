@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 import '../../styles/sections/Hero.css';
 
 const Hero: React.FC = () => {
@@ -9,12 +9,12 @@ const Hero: React.FC = () => {
       <div className="hero-content">
         <motion.h1 
           className="hero-title glitch"
-          data-text="FULL STACK DEVELOPER"
+          data-text="JOSÉ JUAN PÉREZ GONZÁLEZ"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          FULL STACK DEVELOPER
+          JOSÉ JUAN PÉREZ GONZÁLEZ
         </motion.h1>
 
         <motion.p 
@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          "Full Stack Developer"
+          Full-Stack Developer & XR Specialist
         </motion.p>
 
         <motion.div 
@@ -40,21 +40,25 @@ const Hero: React.FC = () => {
               const developer = {'{'}
             </div>
             <div className="code-line">
-              &nbsp;&nbsp;name: "Full Stack Developer",
+              &nbsp;&nbsp;name: "José Juan Pérez González",
             </div>
             <div className="code-line">
-              &nbsp;&nbsp;skills: ["React", "Node.js", "Python", "TypeScript"],
+              &nbsp;&nbsp;role: "Full-Stack Developer & XR Specialist",
             </div>
             <div className="code-line">
-              &nbsp;&nbsp;passion: "Building amazing applications"
+              &nbsp;&nbsp;skills: ["Unity", "C#", "Vue.js", "Node.js", "XR", "Mobile Apps"],
             </div>
             <div className="code-line">
-              {'}'};
+              &nbsp;&nbsp;experience: "1 years in Web & XR Development",
             </div>
             <div className="code-line">
-              console.log("Ready to code!");
+              &nbsp;&nbsp;passion: "Creating immersive experiences & mobile solutions"
             </div>
-            <div className="code-output code-success">Ready to code!</div>
+           
+            <div className="code-line">
+              console.log("Ready to innovate!");
+            </div>
+            <div className="code-output code-success">Ready to innovate!</div>
           </div>
         </motion.div>
 
@@ -64,8 +68,8 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.9 }}
         >
-          Passionate about creating powerful, scalable applications and pushing the boundaries of web development. 
-          Specialized in modern technologies and clean, efficient code.
+          Desarrollador web full-stack y especialista en Unity con experiencia en Realidad Extendida (XR) y aplicaciones móviles. 
+          Apasionado por crear experiencias inmersivas, aplicaciones web innovadoras y soluciones móviles que desafían los límites tecnológicos.
         </motion.p>
 
         <motion.div 
@@ -79,14 +83,14 @@ const Hero: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            View Projects
+            Ver Proyectos
           </motion.button>
           <motion.button 
             className="hero-btn secondary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            Contact Me
+            Contactar
           </motion.button>
         </motion.div>
 
@@ -97,16 +101,16 @@ const Hero: React.FC = () => {
           transition={{ duration: 1, delay: 1.5 }}
         >
           <div className="stat-item">
-            <div className="stat-value">50+</div>
-            <div className="stat-label">Projects Built</div>
+            <div className="stat-value">1</div>
+            <div className="stat-label">Año de Experiencia</div>
           </div>
           <div className="stat-item">
-            <div className="stat-value">100%</div>
-            <div className="stat-label">Code Quality</div>
+            <div className="stat-value">XR</div>
+            <div className="stat-label">Especialista</div>
           </div>
           <div className="stat-item">
-            <div className="stat-value">24/7</div>
-            <div className="stat-label">Development</div>
+            <div className="stat-value">Unity</div>
+            <div className="stat-label">Expert</div>
           </div>
         </motion.div>
 
@@ -126,7 +130,7 @@ const Hero: React.FC = () => {
             <FaGithub />
           </motion.a>
           <motion.a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/in/jose-juan-perez-gonzalez/" 
             target="_blank" 
             rel="noopener noreferrer"
             whileHover={{ scale: 1.2, y: -5 }}
@@ -135,11 +139,18 @@ const Hero: React.FC = () => {
             <FaLinkedin />
           </motion.a>
           <motion.a 
-            href="mailto:contact@developer.com"
+            href="mailto:joseperezglz01@gmail.com"
             whileHover={{ scale: 1.2, y: -5 }}
             whileTap={{ scale: 0.9 }}
           >
             <FaEnvelope />
+          </motion.a>
+          <motion.a 
+            href="tel:+34651034652"
+            whileHover={{ scale: 1.2, y: -5 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            <FaPhone />
           </motion.a>
         </motion.div>
       </div>

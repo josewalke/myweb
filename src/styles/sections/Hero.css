@@ -84,7 +84,7 @@
 .hero-description {
   font-size: 1.2rem;
   line-height: 1.8;
-  margin-bottom: 3rem;
+  margin: 3rem;
   color: #aaa;
   font-family: 'Share Tech Mono', monospace;
 }
@@ -99,6 +99,7 @@
   display: flex;
   gap: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .hero-btn {
@@ -158,7 +159,7 @@
 
 .code-window {
   width: 550px;
-  height: 380px;
+  height: 480px;
   background: rgba(0, 0, 0, 0.8);
   border: 2px solid #ff003c;
   border-radius: 12px;

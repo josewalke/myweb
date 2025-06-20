@@ -5,10 +5,10 @@ import '../../styles/sections/About.css';
 
 const About: React.FC = () => {
   const stats = [
-    { icon: <FaCode />, number: '5+', label: 'Años de Experiencia' },
-    { icon: <FaUser />, number: '50+', label: 'Proyectos Completados' },
-    { icon: <FaGraduationCap />, number: '10+', label: 'Certificaciones' },
-    { icon: <FaHeart />, number: '100%', label: 'Satisfacción del Cliente' }
+    { icon: <FaCode />, number: '1+', label: 'Año de Experiencia' },
+    { icon: <FaUser />, number: 'XR', label: 'Especialista' },
+    { icon: <FaGraduationCap />, number: 'Unity', label: 'Expert' },
+    { icon: <FaHeart />, number: '100%', label: 'Innovación' }
   ];
 
   return (
@@ -35,40 +35,39 @@ const About: React.FC = () => {
           >
             <h3>¿Quién soy?</h3>
             <p>
-              Soy un desarrollador de software apasionado con más de 5 años de experiencia 
-              en el desarrollo de aplicaciones web y móviles. Me especializo en crear 
-              soluciones innovadoras que combinan funcionalidad excepcional con una 
-              experiencia de usuario intuitiva.
+              Soy José Juan Pérez González, desarrollador web full-stack y especialista en Unity con una sólida 
+              experiencia en Realidad Extendida (XR) y aplicaciones móviles. Capaz de manejar tanto el frontend como el backend del 
+              desarrollo web, creando experiencias de usuario dinámicas e integradas.
             </p>
             
             <p>
-              Mi enfoque se centra en el desarrollo full-stack, utilizando las últimas 
-              tecnologías y mejores prácticas de la industria. Me mantengo constantemente 
-              actualizado con las nuevas tendencias y herramientas del desarrollo de software.
+              Mi pasión por Unity y XR me distingue en el campo del desarrollo de juegos, aplicaciones móviles y aplicaciones de 
+              realidad virtual y aumentada. Destaco por mi capacidad para llevar los proyectos al siguiente 
+              nivel, desafiando constantemente los límites tecnológicos y explorando nuevas formas de innovación.
             </p>
 
             <div className="about-features">
               <div className="feature">
-                <div className="feature-icon">🚀</div>
+                <div className="feature-icon">🥽</div>
                 <div>
-                  <h4>Desarrollo Rápido</h4>
-                  <p>Metodologías ágiles y entrega continua</p>
+                  <h4>Desarrollo XR</h4>
+                  <p>Realidad Virtual y Aumentada con Unity</p>
                 </div>
               </div>
               
               <div className="feature">
-                <div className="feature-icon">🎯</div>
+                <div className="feature-icon">📱</div>
                 <div>
-                  <h4>Enfoque en Calidad</h4>
-                  <p>Código limpio y mantenible</p>
+                  <h4>Aplicaciones Móviles</h4>
+                  <p>Desarrollo nativo y multiplataforma</p>
                 </div>
               </div>
               
               <div className="feature">
-                <div className="feature-icon">💡</div>
+                <div className="feature-icon">⚡</div>
                 <div>
-                  <h4>Soluciones Creativas</h4>
-                  <p>Enfoque innovador en cada proyecto</p>
+                  <h4>Innovación</h4>
+                  <p>Experiencias inmersivas únicas</p>
                 </div>
               </div>
             </div>
@@ -111,29 +110,29 @@ const About: React.FC = () => {
           <h3>Educación y Certificaciones</h3>
           <div className="education-grid">
             <div className="education-item">
-              <div className="education-year">2020 - 2024</div>
+              <div className="education-year">2021 - 2022</div>
               <div className="education-content">
-                <h4>Ingeniería en Sistemas Computacionales</h4>
-                <p>Universidad Tecnológica</p>
-                <p>Especialización en Desarrollo de Software</p>
+                <h4>Máster en Diseño y Desarrollo de Videojuegos | Unity</h4>
+                <p>EVAD, Málaga</p>
+                <p>Especialización en desarrollo de videojuegos con Unity</p>
               </div>
             </div>
             
             <div className="education-item">
-              <div className="education-year">2023</div>
+              <div className="education-year">2019 - 2020</div>
               <div className="education-content">
-                <h4>Certificación AWS Developer</h4>
-                <p>Amazon Web Services</p>
-                <p>Desarrollo de aplicaciones en la nube</p>
+                <h4>Desarrollo Web Full-Stack | Front: Vue.js, Back: Node.js</h4>
+                <p>Reboot Academy, Las Palmas de Gran Canaria</p>
+                <p>Desarrollo web completo con tecnologías modernas</p>
               </div>
             </div>
             
             <div className="education-item">
-              <div className="education-year">2022</div>
+              <div className="education-year">2017 - 2019</div>
               <div className="education-content">
-                <h4>Certificación React Developer</h4>
-                <p>Meta (Facebook)</p>
-                <p>Desarrollo frontend con React</p>
+                <h4>Grado Superior en Informática | Administración de Sistemas Informáticos en Red</h4>
+                <p>ICSE, Las Palmas de Gran Canaria</p>
+                <p>Formación técnica en sistemas informáticos</p>
               </div>
             </div>
           </div>
