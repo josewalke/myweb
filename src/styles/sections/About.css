@@ -205,3 +205,19 @@
     font-size: 2.5rem;
   }
 } 
+
+@media (max-width: 360px) {
+  .about-title {
+    font-size: 1.3rem;
+  }
+  .about-description {
+    font-size: 0.85rem;
+  }
+  .about-image-container {
+    width: 160px;
+    height: 160px;
+  }
+  .stat-number {
+    font-size: 1.5rem;
+  }
+} 

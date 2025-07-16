@@ -279,3 +279,15 @@
     font-size: 1rem;
   }
 } 
+
+@media (max-width: 360px) {
+  .projects-title {
+    font-size: 1.1rem;
+  }
+  .project-title {
+    font-size: 0.9rem;
+  }
+  .project-description, .projects-description {
+    font-size: 0.7rem;
+  }
+} 

@@ -259,3 +259,21 @@
     font-size: 0.9rem;
   }
 } 
+
+@media (max-width: 360px) {
+  .experience-title {
+    font-size: 1.1rem;
+  }
+  .timeline-content {
+    padding: 0.7rem;
+  }
+  .job-title {
+    font-size: 0.8rem;
+  }
+  .company-name {
+    font-size: 0.7rem;
+  }
+  .job-description {
+    font-size: 0.7rem;
+  }
+} 

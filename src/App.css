@@ -279,6 +279,28 @@ section::before {
   }
 }
 
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  section {
+    padding: 2.5rem 0;
+  }
+  .section-header {
+    padding: 1rem;
+  }
+  .section-header h2 {
+    font-size: 1.3rem;
+  }
+  .section-header p {
+    font-size: 0.9rem;
+  }
+}
+
 /* Estilos para scrollbar personalizada */
 ::-webkit-scrollbar {
   width: 8px;
