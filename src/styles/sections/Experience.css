@@ -277,3 +277,50 @@
     font-size: 0.7rem;
   }
 } 
+
+@media (max-width: 900px) {
+  .timeline-content {
+    padding: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .experience-title {
+    font-size: 1.2rem;
+  }
+  .timeline-content {
+    padding: 0.6rem;
+  }
+  .job-title {
+    font-size: 0.9rem;
+  }
+  .company-name {
+    font-size: 0.8rem;
+  }
+  .job-description {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 414px) {
+  .experience-title {
+    font-size: 1rem;
+  }
+  .timeline-content {
+    padding: 0.4rem;
+  }
+}
+@media (max-width: 375px) {
+  .experience-title {
+    font-size: 0.8rem;
+  }
+  .timeline-content {
+    padding: 0.2rem;
+  }
+}
+@media (max-width: 320px) {
+  .experience-title {
+    font-size: 0.7rem;
+  }
+  .timeline-content {
+    padding: 0.1rem;
+  }
+} 

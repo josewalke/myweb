@@ -73,31 +73,6 @@ const About: React.FC = () => {
             </div>
           </motion.div>
 
-          <motion.div 
-            className="about-stats"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-          >
-            <div className="stats-grid">
-              {stats.map((stat, index) => (
-                <motion.div 
-                  key={index}
-                  className="stat-item"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="stat-icon">{stat.icon}</div>
-                  <div className="stat-number">{stat.number}</div>
-                  <div className="stat-label">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
         </div>
 
         <motion.div 

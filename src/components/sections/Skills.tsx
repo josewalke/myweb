@@ -40,7 +40,6 @@ const Skills: React.FC = () => {
       skills: [
         { name: 'Git', icon: <FaGitAlt />, level: 90, color: '#f44336' },
         { name: 'Docker', icon: <FaDocker />, level: 70, color: '#e53935' },
-        { name: 'AWS', icon: <FaAws />, level: 75, color: '#d32f2f' },
         { name: 'Figma', icon: <FaFigma />, level: 65, color: '#c62828' }
       ]
     }
@@ -88,7 +87,6 @@ const Skills: React.FC = () => {
                       </div>
                       <div className="skill-info">
                         <h4>{skill.name}</h4>
-                        <span className="skill-level">{skill.level}%</span>
                       </div>
                     </div>
                     

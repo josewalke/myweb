@@ -291,3 +291,54 @@
     font-size: 0.7rem;
   }
 } 
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .projects-title {
+    font-size: 1.3rem;
+  }
+  .project-title {
+    font-size: 1rem;
+  }
+  .projects-description {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 414px) {
+  .projects-title {
+    font-size: 1rem;
+  }
+  .project-title {
+    font-size: 0.8rem;
+  }
+  .projects-description {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 375px) {
+  .projects-title {
+    font-size: 0.8rem;
+  }
+  .project-title {
+    font-size: 0.7rem;
+  }
+  .projects-description {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 320px) {
+  .projects-title {
+    font-size: 0.7rem;
+  }
+  .project-title {
+    font-size: 0.6rem;
+  }
+  .projects-description {
+    font-size: 0.5rem;
+  }
+} 

@@ -57,10 +57,14 @@
 }
 
 .about-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 100vw;
+  margin: 1.2rem auto;
 }
 
 .stat-item {
@@ -162,62 +166,161 @@
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 1024px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 900px) {
+  .about-stats { flex-direction: row; }
+}
 @media (max-width: 768px) {
-  .about {
-    padding: 4rem 1rem;
-  }
-  
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 600px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 540px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 414px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 393px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 375px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 320px) {
+  .about-stats { flex-direction: row; }
+}
+@media (max-width: 900px) {
   .about-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
-  
-  .about-title {
-    font-size: 2.5rem;
-  }
-  
   .about-image-container {
-    width: 300px;
-    height: 300px;
-  }
-  
-  .about-stats {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    width: 220px;
+    height: 220px;
   }
 }
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .about-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-  
   .about-description {
+    font-size: 0.9rem;
+  }
+  .about-image-container {
+    width: 140px;
+    height: 140px;
+  }
+}
+@media (max-width: 414px) {
+  .about-title {
+    font-size: 1.2rem;
+  }
+  .about-description {
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 375px) {
+  .about-title {
     font-size: 1rem;
   }
-  
-  .about-image-container {
-    width: 250px;
-    height: 250px;
+  .about-description {
+    font-size: 0.6rem;
   }
-  
-  .stat-number {
-    font-size: 2.5rem;
+}
+@media (max-width: 320px) {
+  .about-title {
+    font-size: 0.8rem;
+  }
+  .about-description {
+    font-size: 0.5rem;
   }
 } 
 
-@media (max-width: 360px) {
-  .about-title {
-    font-size: 1.3rem;
-  }
-  .about-description {
-    font-size: 0.85rem;
-  }
-  .about-image-container {
-    width: 160px;
-    height: 160px;
-  }
-  .stat-number {
-    font-size: 1.5rem;
-  }
+/* Ajuste SOLO para las estadísticas de About */
+.about-stats .stats-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.about-stats .stat-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+  background: rgba(255,0,60,0.10);
+  border: 2px solid #ff003c;
+  border-radius: 14px;
+  padding: 0.8rem 1.5rem;
+  min-width: 220px;
+  max-width: 520px;
+  width: 100%;
+  box-shadow: 0 2px 18px rgba(255,0,60,0.10);
+  transition: box-shadow 0.3s, transform 0.3s;
+  overflow: visible;
+  height: auto;
+}
+
+.about-stats .stat-icon {
+  flex: 0 0 2.2rem;
+  font-size: 2rem;
+  color: #ff003c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2rem;
+  max-width: 2.2rem;
+}
+
+.about-stats .stat-number {
+  flex: 0 0 3.2rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #ff003c;
+  text-align: left;
+  margin-right: 0.5rem;
+  text-shadow: 0 0 8px rgba(255,0,60,0.18);
+  min-width: 2.5rem;
+  max-width: 3.2rem;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.about-stats .stat-label {
+  flex: 1 1 auto;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  text-align: left;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-shadow: 0 1px 8px rgba(255,0,60,0.10);
+} 
+
+.about-stats .stat-item-vertical {
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.2rem !important;
+  text-align: center;
+}
+.about-stats .stat-item-vertical .stat-number {
+  font-size: 1.7rem;
+  margin: 0;
+  min-width: unset;
+  max-width: unset;
+  text-align: center;
+}
+.about-stats .stat-item-vertical .stat-label {
+  font-size: 1.1rem;
+  text-align: center;
+  white-space: normal;
 } 

@@ -44,16 +44,16 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, delay: 0.9 }}
           >
             <div className="stat-item">
-              <div className="stat-value">1</div>
               <div className="stat-label">Año de Experiencia</div>
+              <div className="stat-value">1</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">XR</div>
               <div className="stat-label">Especialista</div>
+              <div className="stat-value">XR</div>
             </div>
             <div className="stat-item">
-              <div className="stat-value">Unity</div>
               <div className="stat-label">Expert</div>
+              <div className="stat-value">Unity</div>
             </div>
           </motion.div>
 
